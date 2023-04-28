@@ -29,3 +29,16 @@ const countdown = () => {
 //executando o countdown a cada 500ms
 setInterval(countdown, 500)
 
+
+//-----------------------------------------------------------------
+//alert
+
+const alerta = document.querySelector('.alert')
+ 
+alerta.addEventListener('click', clicked)
+
+function clicked(){
+    alert('você está inscrito. Confia :)')
+    return alert
+}
+

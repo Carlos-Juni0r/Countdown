@@ -3,6 +3,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 body {
     min-height: 100vh;
     display: flex;
@@ -26,8 +28,6 @@ main{
     display: flex;
     flex-basis: 50vh;
     margin-left: 10px;
-    
-    
 }
 
 footer{
@@ -135,8 +135,8 @@ footer img{
     color: #9C9AB6;
 }
 
-#botao a{
-    text-decoration: none;
+.alert{
+    border-style: none;
     font-weight: 400;
     border: 1px solid black;
     border-radius: 5px;
@@ -145,29 +145,32 @@ footer img{
     color: #FFFFFF;
 }
 
-#botao a:hover{
+.alert:active{
     background-color: #433ea5;
 }
 
-@media (max-width: 900px) {
+.logo-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 740px) {
     * {
         margin: 0;
         font-family: 'Poppins', sans-serif;
     }
     body {
-        min-height: 90vh;
-        max-width: 90vh;
         display: flex;
+        min-height: 100vh;
         flex-direction: column;
         box-sizing: content-box;
         align-items: center;
         width: 100%;
-        height: auto;
+        height: 100vh;
         background-color: #E5E5E5;
        
     }
     header{
-        flex-basis: 30vh;
+        flex: 1;
         width: 100%;
         box-sizing: content-box;
     }
@@ -177,23 +180,21 @@ footer img{
     
     main{
         display: flex;
-        flex-basis: 30vh;
+        flex: 1.5;
         margin-left: 10px;
         margin-right: 10px;
-                
-        
     }
     
     footer{
         display: flex;
-        box-sizing: content-box;
+        box-sizing: border-box;
         position: relative;
-        flex-basis: 30vh;
+        flex: 1;
         height: auto;
         width: 100%;
         margin: 0;
         align-items: end;
-        
+        bottom: 0;
     }
     
     footer img{
@@ -203,34 +204,38 @@ footer img{
     }
     
     #informações{
-        width: auto;
+        display: flex;
+        width: 100%;
         height: auto;
         gap: .8rem;
+        justify-content: space-around;
+        align-items: center;
     }
     
     
     #informações h1{
+        display: flex;
         width: 100%;
         height: auto;
         font-weight: 700;
         font-size: larger;
         line-height: auto;
         color: #6C63FF;
-        
+        justify-content: center;
     }
     
-#countdown {
-    display: flex;
-    justify-content:baseline;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-    gap: 8px;
-    font-weight: 300;
-    font-size: 100%;
-    font-weight: 300;
-    line-height: 50%;
-    font-family: 'Poppins', sans-serif;
+    #countdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 5%;
+        font-weight: 300;
+        font-size: 100%;
+        font-weight: 300;
+        line-height: 50%;
+        font-family: 'Poppins', sans-serif;
 }
     
     .container-day,
@@ -265,17 +270,10 @@ footer img{
     }
     
     #foguete{
-        width: 60%;
-        margin-left: 0;
-        flex: 1;
-        height: 70%;
+     display: none;
     }
     
-    #foguete img {
-        padding-top: 30%;
-        width: 100%;
-        height: auto;
-    }
+
     
     #botao {
         display: flex;
@@ -288,10 +286,19 @@ footer img{
     #botao p{
         width: 100%;
         margin-bottom: 10px;
-        font-size: small;
+        font-size: 13px;
         font-weight: 400;
         color: #9C9AB6;
     }
 
+    .logo-mobile{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15%;
+}
     
+    .logo-mobile img{
+        width: 30%;
+    }
 }
